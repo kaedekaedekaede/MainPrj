@@ -1,0 +1,26 @@
+
+{% load static %}
+<!doctype html>
+<html lang="ja">
+  <head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="{% static 'BookApp/css/bootstrap/bootstrap.min.css' %}" rel="stylesheet">
+    <link href="{% static 'BookApp/css/main.css' %}" rel="stylesheet">
+    {% block title %}{% endblock %}
+  </head>
+  <body>
+    <header>
+      <img class="img-thumbnail" src="{% static 'BookApp/img/beautiful.jpg' %}">
+      <h4 id="head_title" class="my-4">{% block head_title %}{% endblock %}</h4>
+    </header>
+    <main>
+      {% block contents %}{% endblock %}
+    </main>
+    <footer>
+    </footer>
+    <script src="{% static 'BookApp/js/bootstrap/bootstrap.bundle.min.js' %}"></script>
+    <script src="{% static 'BookApp/js/jquery-3.7.1.min.js' %}"></script>
+    <script src="{% static 'BookApp/js/main.js' %}"></script>
+  </body>
+</html>
